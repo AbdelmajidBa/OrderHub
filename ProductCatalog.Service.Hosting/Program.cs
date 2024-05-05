@@ -1,4 +1,10 @@
+using ProductCatalog.Service.Hosting.Services;
+using ProductCatalog.Service.Hosting.Services.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.AddScoped<IProductCatalogService, ProductCatalogService>();
 
 builder.Services.AddControllers();
 
